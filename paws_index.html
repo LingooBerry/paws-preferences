@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="shortcut icon" type="x-icon" href="catlogo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#ff6b9d">
+<title>Paws & Preferences 🐾</title>
+<link rel="stylesheet" href="paws_css.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+<div class="banner">
+  <div class="banner-content">
+    <h1>Paws & Preferences<span class="paw-decoration"><i class="fa-solid fa-paw"></i></span></h1>
+    <p class="banner-subtitle">Discover Your Purrfect Match</p>
+  </div>
+</div>
+
+<div class="app-wrapper">
+  <div class="app" id="app">
+    <div class="header">
+      <h2>Start Swiping</h2>
+      <p>Tap info (i) to see profiles • Double-tap to Super Like <i class="fa-solid fa-star"></i></p>
+    </div>
+
+    <div class="card-container">
+      <div class="stack" id="stack"></div>
+    </div>
+
+    <div class="controls" id="controls">
+      <button class="btn undo" onclick="undoSwipe()" id="undoBtn" title="Undo">
+        <i class="fa-solid fa-rotate-left"></i>
+        <span class="undo-count" id="undoCount">3</span>
+      </button>
+      <button class="btn nope" onclick="handleButtonSwipe('left')" title="Pass"><i class="fa-solid fa-xmark"></i></button>
+      <button class="btn like" onclick="handleButtonSwipe('right')" title="Like"><i class="fa-solid fa-heart"></i></button>
+      <button class="btn superlike" onclick="handleButtonSwipe('superlike')" title="Super Like"><i class="fa-solid fa-star"></i></button>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="progress-text" id="progress"></p>
+    </div>
+  </div>
+</div>
+
+<div class="footer-banner">
+  <div class="footer-content">
+    © 2026 <span>Paws & Preferences</span> • All rights reserved.
+  </div>
+</div>
+
+<!-- Match Animation -->
+<div class="match-overlay" id="matchOverlay">
+  <div class="match-content">
+    <h2>It's a Match! 💕</h2>
+    <img class="match-image" id="matchImage" src="" alt="Match">
+  </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" src="" alt="Cat">
+  </div>
+</div>
+<script src="paws_js.js"></script>
+</body>
+</html>
