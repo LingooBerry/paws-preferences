@@ -18,9 +18,10 @@ A simple custom new-tab website that displays a paw-themed logo and fun statisti
 2. pawspref.css — styling for layout and icons
 3. catlogo.png — paw logo
 4. pawspref.js — optional JavaScript (animations, interactivity)
-Hosted Website View the live site here:
 
+**Hosted Website View the live site here:**
+https://lingooberry.github.io/paws-preferences/paws_index.html
 
 **How to Use**
 Clone the repository:
-git clone https://github.com/USERNAME/REPO-NAME.git
+git clone https://github.com/LingooBerry/paws-preferences.git
